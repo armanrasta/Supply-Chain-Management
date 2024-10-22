@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        
+        <!-- Supplier Capacity Form -->
+        <record id="view_supplier_capacity_form" model="ir.ui.view">
+            <field name="name">scm.supplier.capacity.form</field>
+            <field name="model">scm.supplier_capacity</field>
+            <field name="arch" type="xml">
+                <form string="Supplier Capacity">
+                    <sheet>
+                        <group>
+                            <field name="supplier_id5" />
+                            <field name="product_id" />
+                        </group>
+                        <group string="Capacity Details">
+                            <field name="max_capacity" />
+                            <field name="min_capacity" />
+                            <field name="current_utilization" />
+                            <field name="utilization_trend" />
+                            <field name="lead_time" />
+                            <field name="last_review_date" />
+                        </group>
+                        <group string="Capacity Type and Status">
+                            <field name="capacity_type" />
+                            <field name="capacity_status" />
+                            <field name="period" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Supplier Scalability Form -->
+        <record id="view_supplier_scalability_form" model="ir.ui.view">
+            <field name="name">scm.supplier.scalability.form</field>
+            <field name="model">scm.supplier_scalability</field>
+            <field name="arch" type="xml">
+                <form string="Supplier Scalability Plans">
+                    <sheet>
+                        <group>
+                            <field name="supplier_id6" />
+                        </group>
+                        <group string="Scalability Plans">
+                            <field name="scale_up_plan" />
+                            <field name="scale_down_plan" />
+                            <field name="investment_required" />
+                        </group>
+                        <group string="Time and Capacity Adjustments">
+                            <field name="time_to_scale_up" />
+                            <field name="time_to_scale_down" />
+                            <field name="scale_up_capacity" />
+                            <field name="scale_down_capacity" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Supplier Capacity Tree  -->
+        <record id="view_supplier_capacity_tree" model="ir.ui.view">
+            <field name="name">scm.supplier.capacity.tree</field>
+            <field name="model">scm.supplier_capacity</field>
+            <field name="arch" type="xml">
+                <tree string="Supplier Capacity">
+                    <field name="supplier_id5" />
+                    <field name="product_id" />
+                    <field name="max_capacity" />
+                    <field name="current_utilization" />
+                    <field name="lead_time" />
+                    <field name="capacity_status" />
+                    <field name="period" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Supplier Scalability Tree -->
+        <record id="view_supplier_scalability_tree" model="ir.ui.view">
+            <field name="name">scm.supplier.scalability.tree</field>
+            <field name="model">scm.supplier_scalability</field>
+            <field name="arch" type="xml">
+                <tree string="Supplier Scalability Plans">
+                    <field name="supplier_id6" />
+                    <field name="investment_required" />
+                    <field name="time_to_scale_up" />
+                    <field name="time_to_scale_down" />
+                    <field name="scale_up_capacity" />
+                    <field name="scale_down_capacity" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="action_supplier_capacity" model="ir.actions.act_window">
+            <field name="name">Supplier Capacity</field>
+            <field name="res_model">scm.supplier_capacity</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create and manage supplier capacity information.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_supplier_scalability" model="ir.actions.act_window">
+            <field name="name">Supplier Scalability Plans</field>
+            <field name="res_model">scm.supplier_scalability</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Define and manage scalability plans for suppliers.
+                </p>
+            </field>
+        </record>
+
+        <!-- MenuItem -->
+        <menuitem id="menu_cap_scale"
+            name="Cap and Scale"
+            parent="main_supplier_menu"
+            action="action_supplier_capacity"
+            sequence="30" />
+
+        <menuitem id="menu_supplier_capacity"
+            name="Supplier Capacity"
+            parent="menu_cap_scale"
+            action="action_supplier_capacity"
+            sequence="1" />
+
+        <menuitem id="menu_supplier_scalability"
+            name="Supplier Scalability Plans"
+            parent="menu_cap_scale"
+            action="action_supplier_scalability"
+            sequence="2" />
+
+    </data>
+
+</odoo>

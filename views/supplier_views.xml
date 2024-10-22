@@ -1,0 +1,284 @@
+<odoo>
+	<data>
+		<!-- Supplier Form View -->
+		<record id="view_supplier_form" model="ir.ui.view">
+			<field name="name">scm.supplier.form</field>
+			<field name="model">scm.supplier</field>
+			<field name="arch" type="xml">
+				<form string="Supplier">
+					<sheet>
+						<notebook>
+							<page name="Supplier Info" string="Supplier Information">
+								<group>
+									<field name="name" />
+									<field name="contact_email" />
+									<field name="contact_phone" />
+									<field name="address" />
+									<field name="active" />
+									<field name="performance_score" />
+								</group>
+							</page>
+							<page name="Supplier Relations" string="Related fields to supplier">
+								<group>
+									<field name="inventory_item_id" widget="many2many-tags"
+										options="{'no_create': True}" />
+									<field name="network_robustness_id" widget="many2many_tags"
+										options="{'no_create': True}" />
+									<field name="demand_forecast_id" widget="many2many_tags"
+										options="{'no_create': True}" />
+									<field name="capacity_id" />
+									<field name="scalability_id" />
+									<field name="contact_person_id" />
+									<field name="reliability_id" />
+									<field name="supplier_cost_competitiveness_id" />
+									<field name="supplier_relationship_strength_id" />
+									<field name="supplier_rd_investment_id" />
+									<field name="supplier_product_innovation_id" />
+									<field name="carbon_objective_id" />
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- supplier carbon objective form view -->
+		<record id="view_supplier_carbon_objective_form" model="ir.ui.view">
+			<field name="name">scm.carbon_objective.form</field>
+			<field name="model">scm.carbon_objective</field>
+			<field name="arch" type="xml">
+				<form string="Carbon Footprint Reduction Objective">
+					<sheet>
+						<group>
+							<field name="name" required="1" />
+							<field name="description" />
+							<field name="target_reduction" required="1" />
+							<field name="start_date" required="1" />
+							<field name="end_date" required="1" />
+							<field name="current_progress" readonly="1" />
+							<field name="active" />
+						</group>
+						<notebook>
+							<page string="Suppliers">
+								<field name="supplier_id4" widget="many2many_tags"
+									options="{'no_create': False}" />
+							</page>
+							<page string="Inventory Items">
+								<field name="inventory_item_id4" widget="many2many_tags"
+									options="{'no_create': False}" />
+							</page>
+							<page string="Facilities">
+								<field name="facility_ids" widget="many2many_tags"
+									options="{'no_create': False}" />
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- supplier cost competitiveness form view -->
+		<record id="view_supplier_cost_competitiveness_form" model="ir.ui.view">
+			<field name="name">scm.supplier.cost.competitiveness.form</field>
+			<field name="model">scm.supplier_cost_competitiveness</field>
+			<field name="arch" type="xml">
+				<form string="Supplier Cost Competitiveness">
+					<sheet>
+						<group>
+							<field name="supplier_id10" />
+							<field name="product_id" />
+						</group>
+						<group string="Price Competitiveness">
+							<field name="supplier_price" />
+							<field name="market_average_price" />
+							<field name="price_competitiveness_index" readonly="1" />
+						</group>
+						<group string="Total Cost of Ownership (TCO)">
+							<field name="procurement_cost" />
+							<field name="operation_cost" />
+							<field name="maintenance_cost" />
+							<field name="disposal_cost" />
+							<field name="total_cost_of_ownership" readonly="1" />
+						</group>
+						<group string="Price Trend">
+							<field name="price_trend" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+
+		<!-- Suppllier Tree View -->
+		<record id="view_supplier_tree" model="ir.ui.view">
+			<field name="name">scm.supplier.tree</field>
+			<field name="model">scm.supplier</field>
+			<field name="arch" type="xml">
+				<tree string="Supplier">
+					<field name="name" />
+					<field name="active" />
+					<field name="performance_score" />
+					<field name="address" />
+				</tree>
+			</field>
+		</record>
+
+		<!-- Tree View -->
+		<record id="view_supplier_carbon_objective_tree" model="ir.ui.view">
+			<field name="name">scm.carbon_objective.tree</field>
+			<field name="model">scm.carbon_objective</field>
+			<field name="arch" type="xml">
+				<tree string="Carbon Footprint Reduction Objectives">
+					<field name="name" />
+					<field name="target_reduction" />
+					<field name="start_date" />
+					<field name="end_date" />
+					<field name="current_progress" />
+					<field name="active" />
+				</tree>
+			</field>
+		</record>
+
+		<!-- view_supplier_cost_competitiveness_tree -->
+		<record id="view_supplier_cost_competitiveness_tree" model="ir.ui.view">
+			<field name="name">scm.supplier.cost.competitiveness.tree</field>
+			<field name="model">scm.supplier_cost_competitiveness</field>
+			<field name="arch" type="xml">
+				<tree string="Supplier Cost Competitiveness">
+					<field name="supplier_id10" />
+					<field name="product_id" />
+					<field name="supplier_price" />
+					<field name="market_average_price" />
+					<field name="price_competitiveness_index" />
+					<field name="total_cost_of_ownership" />
+				</tree>
+			</field>
+		</record>
+
+		<!-- Action For Supplier -->
+		<record id="action_supplier" model="ir.actions.act_window">
+			<field name="name">Supplier</field>
+			<field name="res_model">scm.supplier</field>
+			<field name="view_mode">tree,form</field>
+			<field name="views"
+				eval="[
+          (ref('view_supplier_form'), 'form'),
+          (ref('view_supplier_tree'), 'tree')
+          ]" />
+		</record>
+
+		<!-- Action For Carbon Objective -->
+		<record id="action_supplier_carbon_objective" model="ir.actions.act_window">
+			<field name="name">Carbon Objectives</field>
+			<field name="res_model">scm.carbon_objective</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="view_supplier_carbon_objective_tree" />
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Create your first Carbon Footprint Reduction Objective
+				</p>
+			</field>
+		</record>
+
+
+		<!-- Tree View -->
+		<record id="view_network_robustness_tree" model="ir.ui.view">
+			<field name="name">scm.network_robustness.tree</field>
+			<field name="model">scm.network_robustness</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="value" />
+					<field name="active" />
+				</tree>
+			</field>
+		</record>
+
+		<!-- Form View -->
+		<record id="view_network_robustness_form" model="ir.ui.view">
+			<field name="name">scm.network_robustness.form</field>
+			<field name="model">scm.network_robustness</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="value" />
+							<field name="active" />
+						</group>
+						<group>
+							<field name="description" />
+						</group>
+						<notebook>
+							<page string="Related Items">
+								<group>
+									<field name="inventory_item_id3" />
+									<field name="transportation_mode_id" />
+									<field name="supplier_id" />
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_network_robustness" model="ir.actions.act_window">
+			<field name="name">Network Robustness</field>
+			<field name="res_model">scm.network_robustness</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Create a new network robustness parameter
+				</p>
+			</field>
+		</record>
+
+		<record id="action_supplier_cost_competitiveness" model="ir.actions.act_window">
+			<field name="name">Supplier Cost Competitiveness</field>
+			<field name="res_model">scm.supplier_cost_competitiveness</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Add Supplier Cost Competitiveness Indicators.
+				</p>
+			</field>
+		</record>
+
+		<!-- Menu-Items -->
+		<menuitem id="main_supplier_menu"
+			name="Supplier"
+			sequence="10" />
+
+		<menuitem id="supplier_model_menu"
+			name="Supplier Menu"
+			action="action_supplier"
+			parent="main_supplier_menu"
+			sequence="10" />
+
+		<menuitem id="menu_supplier_carbon_objective_root"
+			name="Carbon Objectives"
+			parent="main_supplier_menu"
+			sequence="20" />
+
+		<menuitem id="menu_supplier_carbon_objective"
+			name="Objectives"
+			parent="menu_supplier_carbon_objective_root"
+			action="action_supplier_carbon_objective"
+			sequence="1" />
+
+		<menuitem id="menu_network_robustness"
+			name="Network Robustness"
+			action="action_network_robustness"
+			parent="main_supplier_menu"
+			sequence="40" />
+
+		<menuitem id="menu_supplier_cost_competitiveness"
+			name="Supplier Cost Competitiveness"
+			parent="main_supplier_menu"
+			action="action_supplier_cost_competitiveness"
+			sequence="50" />
+
+	</data>
+</odoo>
