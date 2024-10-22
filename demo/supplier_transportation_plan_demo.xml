@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Transportation Plans Data -->
+        <record id="transportation_plan_1" model="scm.transportation_plan">
+            <field name="name">Express Air Freight Plan</field>
+            <field name="transportation_mode_id" ref="transportation_mode_1"/> <!-- Air Freight -->
+            <field name="tradeoff_weight_id" ref="tradeoff_weight_1"/> <!-- Assuming you have this entry -->
+        </record>
+
+        <record id="transportation_plan_2" model="scm.transportation_plan">
+            <field name="name">Standard Ocean Freight Plan</field>
+            <field name="transportation_mode_id" ref="transportation_mode_2"/> <!-- Ocean Freight -->
+            <field name="tradeoff_weight_id" ref="tradeoff_weight_2"/> <!-- Assuming you have this entry -->
+        </record>
+
+        <record id="transportation_plan_3" model="scm.transportation_plan">
+            <field name="name">Local Truck Delivery Plan</field>
+            <field name="transportation_mode_id" ref="transportation_mode_3"/> <!-- Truck Delivery -->
+            <field name="tradeoff_weight_id" ref="tradeoff_weight_3"/> <!-- Assuming you have this entry -->
+        </record>
+
+        <record id="transportation_plan_4" model="scm.transportation_plan">
+            <field name="name">Long-Distance Rail Freight Plan</field>
+            <field name="transportation_mode_id" ref="transportation_mode_4"/> <!-- Rail Freight -->
+            <field name="tradeoff_weight_id" ref="tradeoff_weight_4"/> <!-- Assuming you have this entry -->
+        </record>
+    </data>
+</odoo>

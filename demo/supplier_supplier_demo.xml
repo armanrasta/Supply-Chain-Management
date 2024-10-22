@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+
+        <record id="supplier0" model="scm.supplier">
+            <field name="name">Supplier 0</field>
+            <field name="contact_email">supplier0@example.com</field>
+            <field name="contact_phone">1234567890</field>
+            <field name="address">123 Main St, Cityville</field>
+            <field name="performance_score">4.5</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="supplier1" model="scm.supplier">
+            <field name="name">Supplier 1</field>
+            <field name="contact_email">supplier1@example.com</field>
+            <field name="contact_phone">0987654321</field>
+            <field name="address">456 Market St, Townsville</field>
+            <field name="performance_score">3.8</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="supplier2" model="scm.supplier">
+            <field name="name">Supplier 2</field>
+            <field name="contact_email">supplier2@example.com</field>
+            <field name="contact_phone">5551234567</field>
+            <field name="address">789 Industrial Rd, Metropolis</field>
+            <field name="performance_score">4.2</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="supplier3" model="scm.supplier">
+            <field name="name">Supplier 3</field>
+            <field name="contact_email">supplier3@example.com</field>
+            <field name="contact_phone">5559876543</field>
+            <field name="address">1010 High St, Villagetown</field>
+            <field name="performance_score">4.0</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="supplier4" model="scm.supplier">
+            <field name="name">Supplier 4</field>
+            <field name="contact_email">supplier4@example.com</field>
+            <field name="contact_phone">2223334444</field>
+            <field name="address">2020 Low St, Hamlet</field>
+            <field name="performance_score">3.5</field>
+            <field name="active">True</field>
+        </record>
+
+    </data>
+
+</odoo>

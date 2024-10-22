@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Service Level Agreements Data -->
+        <record id="sla_1" model="scm.sla">
+            <field name="name">Standard SLA</field>
+            <field name="fulfillment_rate">95.0</field> <!-- Order fulfillment rate -->
+            <field name="delivery_time">5</field> <!-- Maximum delivery time in days -->
+            <field name="support_response_time">24</field> <!-- Maximum support response time in hours -->
+            <field name="active">True</field> <!-- SLA active status -->
+        </record>
+
+        <record id="sla_2" model="scm.sla">
+            <field name="name">Express SLA</field>
+            <field name="fulfillment_rate">98.0</field> <!-- Order fulfillment rate -->
+            <field name="delivery_time">2</field> <!-- Maximum delivery time in days -->
+            <field name="support_response_time">1</field> <!-- Maximum support response time in hours -->
+            <field name="active">True</field> <!-- SLA active status -->
+        </record>
+
+        <record id="sla_3" model="scm.sla">
+            <field name="name">Premium SLA</field>
+            <field name="fulfillment_rate">99.0</field> <!-- Order fulfillment rate -->
+            <field name="delivery_time">1</field> <!-- Maximum delivery time in days -->
+            <field name="support_response_time">0.5</field> <!-- Maximum support response time in hours -->
+            <field name="active">True</field> <!-- SLA active status -->
+        </record>
+
+        <record id="sla_4" model="scm.sla">
+            <field name="name">Basic SLA</field>
+            <field name="fulfillment_rate">90.0</field> <!-- Order fulfillment rate -->
+            <field name="delivery_time">7</field> <!-- Maximum delivery time in days -->
+            <field name="support_response_time">48</field> <!-- Maximum support response time in hours -->
+            <field name="active">True</field> <!-- SLA active status -->
+        </record>
+    </data>
+</odoo>

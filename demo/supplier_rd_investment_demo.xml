@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+    
+        <record id="supplier_rd_investment_1" model="scm.supplier_rd_investment">
+            <field name="supplier_id7" ref="scm.supplier_1"/> <!-- Reference to an existing supplier -->
+            <field name="amount_invested">50000.00</field>
+            <field name="currency_id" ref="base.USD"/> <!-- Reference to currency (e.g., USD) -->
+            <field name="investment_period_start">2024-01-01</field>
+            <field name="investment_period_end">2024-12-31</field>
+            <field name="investment_trend">5.00</field>
+            <field name="research_focus" ref="scm.research_focus_materials"/> <!-- Reference to an existing research focus -->
+            <field name="expected_roi">10.00</field>
+            <field name="actual_roi">8.00</field>
+            <field name="rd_collaboration">True</field>
+            <field name="environmental_impact">medium</field>
+        </record>
+        
+        <record id="supplier_rd_investment_2" model="scm.supplier_rd_investment">
+            <field name="supplier_id7" ref="scm.supplier_2"/> <!-- Reference to another existing supplier -->
+            <field name="amount_invested">75000.00</field>
+            <field name="currency_id" ref="base.EUR"/> <!-- Reference to another currency (e.g., EUR) -->
+            <field name="investment_period_start">2024-01-01</field>
+            <field name="investment_period_end">2024-12-31</field>
+            <field name="investment_trend">10.00</field>
+            <field name="research_focus" ref="scm.research_focus_technology"/> <!-- Reference to another existing research focus -->
+            <field name="expected_roi">12.00</field>
+            <field name="actual_roi">9.00</field>
+            <field name="rd_collaboration">False</field>
+            <field name="environmental_impact">low</field>
+        </record>
+        
+        <record id="supplier_rd_investment_3" model="scm.supplier_rd_investment">
+            <field name="supplier_id7" ref="scm.supplier_3"/> <!-- Reference to another existing supplier -->
+            <field name="amount_invested">60000.00</field>
+            <field name="currency_id" ref="base.GBP"/> <!-- Reference to another currency (e.g., GBP) -->
+            <field name="investment_period_start">2024-01-01</field>
+            <field name="investment_period_end">2024-12-31</field>
+            <field name="investment_trend">7.50</field>
+            <field name="research_focus" ref="scm.research_focus_sustainability"/> <!-- Reference to another existing research focus -->
+            <field name="expected_roi">15.00</field>
+            <field name="actual_roi">11.00</field>
+            <field name="rd_collaboration">True</field>
+            <field name="environmental_impact">high</field>
+        </record>
+        
+        <record id="supplier_rd_investment_4" model="scm.supplier_rd_investment">
+            <field name="supplier_id7" ref="scm.supplier_4"/> <!-- Reference to another existing supplier -->
+            <field name="amount_invested">90000.00</field>
+            <field name="currency_id" ref="base.JPY"/> <!-- Reference to another currency (e.g., JPY) -->
+            <field name="investment_period_start">2024-01-01</field>
+            <field name="investment_period_end">2024-12-31</field>
+            <field name="investment_trend">8.00</field>
+            <field name="research_focus" ref="scm.research_focus_innovation"/> <!-- Reference to another existing research focus -->
+            <field name="expected_roi">20.00</field>
+            <field name="actual_roi">15.00</field>
+            <field name="rd_collaboration">False</field>
+            <field name="environmental_impact">medium</field>
+        </record>
+        
+    
+    </data>
+    
+
+</odoo>

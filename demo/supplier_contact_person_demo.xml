@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="supplier_contact_person_1" model="scm.supplier_contact_person">
+            <field name="name">John Doe</field>
+            <field name="email">john.doe@example.com</field>
+            <field name="phone">+1234567890</field>
+            <field name="position">Sales Manager</field>
+            <field name="supplier_id1" ref="scm.supplier_1"/> <!-- Reference to an existing supplier -->
+        </record>
+        
+        <record id="supplier_contact_person_2" model="scm.supplier_contact_person">
+            <field name="name">Jane Smith</field>
+            <field name="email">jane.smith@example.com</field>
+            <field name="phone">+0987654321</field>
+            <field name="position">Procurement Officer</field>
+            <field name="supplier_id1" ref="scm.supplier_2"/> <!-- Reference to another existing supplier -->
+        </record>
+        
+        <record id="supplier_contact_person_3" model="scm.supplier_contact_person">
+            <field name="name">Emily Johnson</field>
+            <field name="email">emily.johnson@example.com</field>
+            <field name="phone">+1122334455</field>
+            <field name="position">Customer Relations</field>
+            <field name="supplier_id1" ref="scm.supplier_3"/> <!-- Reference to another existing supplier -->
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+    
+        <record id="inventory_item_category1" model="scm.inventory_item_category">
+            <field name="name">Electronics</field>
+            <field name="is_subcategory" eval="False"/>
+            <field name="holding_cost">5.00</field>
+        </record>
+        
+        <record id="inventory_item_category2" model="scm.inventory_item_category">
+            <field name="name">Mobile Phones</field>
+            <field name="is_subcategory" eval="True"/>
+            <field name="parent_id" ref="inventory_item_category1"/>
+            <field name="holding_cost">2.00</field>
+        </record>
+        
+        <record id="inventory_item_category3" model="scm.inventory_item_category">
+            <field name="name">Laptops</field>
+            <field name="is_subcategory" eval="True"/>
+            <field name="parent_id" ref="inventory_item_category1"/>
+            <field name="holding_cost">4.00</field>
+        </record>        
+    
+    </data>
+
+</odoo>

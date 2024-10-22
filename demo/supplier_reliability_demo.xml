@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Supplier Reliability Data -->
+        <record id="supplier_reliability_1" model="scm.supplier_reliability">
+            <field name="supplier_id2" ref="scm.supplier_1"/> <!-- Reference to an existing supplier -->
+            <field name="date">2024-10-01</field> <!-- Date of reliability assessment -->
+            <field name="on_time_delivery">95.00</field> <!-- On-time delivery percentage -->
+            <field name="quality">4.5</field> <!-- Quality score -->
+            <field name="responsiveness">4.0</field> <!-- Responsiveness score -->
+            <field name="overall_reliability">4.17</field> <!-- Calculated overall reliability -->
+        </record>
+
+        <record id="supplier_reliability_2" model="scm.supplier_reliability">
+            <field name="supplier_id2" ref="scm.supplier_2"/> <!-- Reference to another existing supplier -->
+            <field name="date">2024-10-05</field> <!-- Date of reliability assessment -->
+            <field name="on_time_delivery">90.00</field> <!-- On-time delivery percentage -->
+            <field name="quality">4.0</field> <!-- Quality score -->
+            <field name="responsiveness">3.5</field> <!-- Responsiveness score -->
+            <field name="overall_reliability">3.83</field> <!-- Calculated overall reliability -->
+        </record>
+
+        <record id="supplier_reliability_3" model="scm.supplier_reliability">
+            <field name="supplier_id2" ref="scm.supplier_3"/> <!-- Reference to another existing supplier -->
+            <field name="date">2024-10-10</field> <!-- Date of reliability assessment -->
+            <field name="on_time_delivery">98.00</field> <!-- On-time delivery percentage -->
+            <field name="quality">5.0</field> <!-- Quality score -->
+            <field name="responsiveness">4.5</field> <!-- Responsiveness score -->
+            <field name="overall_reliability">4.83</field> <!-- Calculated overall reliability -->
+        </record>
+
+        <record id="supplier_reliability_4" model="scm.supplier_reliability">
+            <field name="supplier_id2" ref="scm.supplier_4"/> <!-- Reference to another existing supplier -->
+            <field name="date">2024-10-15</field> <!-- Date of reliability assessment -->
+            <field name="on_time_delivery">85.00</field> <!-- On-time delivery percentage -->
+            <field name="quality">3.5</field> <!-- Quality score -->
+            <field name="responsiveness">3.0</field> <!-- Responsiveness score -->
+            <field name="overall_reliability">3.33</field> <!-- Calculated overall reliability -->
+        </record>
+    </data>
+</odoo>

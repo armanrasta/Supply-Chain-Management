@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Transportation Modes Data -->
+        <record id="transportation_mode_1" model="scm.transportation_mode">
+            <field name="name">Air Freight</field>
+            <field name="availability_probability">90.0</field> <!-- Probability that this mode is available -->
+            <field name="description">Fastest mode for long-distance transportation, suitable for urgent deliveries.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+
+        <record id="transportation_mode_2" model="scm.transportation_mode">
+            <field name="name">Ocean Freight</field>
+            <field name="availability_probability">80.0</field> <!-- Probability that this mode is available -->
+            <field name="description">Cost-effective for bulk shipments, slower than air freight.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+
+        <record id="transportation_mode_3" model="scm.transportation_mode">
+            <field name="name">Truck Delivery</field>
+            <field name="availability_probability">95.0</field> <!-- Probability that this mode is available -->
+            <field name="description">Versatile mode for road transport, ideal for local deliveries.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+
+        <record id="transportation_mode_4" model="scm.transportation_mode">
+            <field name="name">Rail Freight</field>
+            <field name="availability_probability">85.0</field> <!-- Probability that this mode is available -->
+            <field name="description">Efficient for transporting large volumes over long distances, with lower carbon footprint.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+    </data>
+</odoo>

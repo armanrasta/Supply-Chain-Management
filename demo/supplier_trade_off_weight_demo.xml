@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Trade-Off Weights Data -->
+        <record id="tradeoff_weight_1" model="scm.tradeoff_weight">
+            <field name="name">Standard Weight</field>
+            <field name="cost_weight">1.0</field> <!-- Weight assigned to cost metrics -->
+            <field name="service_weight">1.0</field> <!-- Weight assigned to service metrics -->
+            <field name="description">Standard trade-off weights for cost and service.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+
+        <record id="tradeoff_weight_2" model="scm.tradeoff_weight">
+            <field name="name">Cost Focused Weight</field>
+            <field name="cost_weight">1.5</field> <!-- Weight assigned to cost metrics -->
+            <field name="service_weight">0.5</field> <!-- Weight assigned to service metrics -->
+            <field name="description">Weights focusing more on cost metrics.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+
+        <record id="tradeoff_weight_3" model="scm.tradeoff_weight">
+            <field name="name">Service Focused Weight</field>
+            <field name="cost_weight">0.5</field> <!-- Weight assigned to cost metrics -->
+            <field name="service_weight">1.5</field> <!-- Weight assigned to service metrics -->
+            <field name="description">Weights focusing more on service metrics.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+
+        <record id="tradeoff_weight_4" model="scm.tradeoff_weight">
+            <field name="name">Balanced Weight</field>
+            <field name="cost_weight">1.0</field> <!-- Weight assigned to cost metrics -->
+            <field name="service_weight">1.0</field> <!-- Weight assigned to service metrics -->
+            <field name="description">Balanced weights for both cost and service metrics.</field>
+            <field name="active">True</field> <!-- Active status -->
+        </record>
+    </data>
+</odoo>
