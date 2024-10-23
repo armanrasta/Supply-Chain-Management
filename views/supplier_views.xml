@@ -249,7 +249,7 @@
 		<!-- Menu-Items -->
 		<menuitem id="main_supplier_menu"
 			name="Supplier"
-			sequence="10"
+			sequence="1"
 			web_icon="scm,static\description\supplier.png" />
 
 		<menuitem id="supplier_model_menu"

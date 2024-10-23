@@ -1,249 +1,253 @@
 <odoo>
-    <data>
-  
-      <!-- Inventory Item Form View -->
-      <record id="view_inventory_item_form" model="ir.ui.view">
-        <field name="name">scm.inventory_item.form</field>
-        <field name="model">scm.inventory_item</field>
-        <field name="arch" type="xml">
-          <form string="Inventory Item">
-            <sheet>
-              <group>
-                <field name="name" />
-                <field name="description" />
-                <field name="category_id" />
-                <field name="location_id" />
-                <field name="stock_level" />
-                <field name="reorder_point" />
-                <field name="safety_stock" />
-                <field name="unit_cost" />
-                <field name="total_cost" />
-                <field name="lead_time_days" />
-                <field name="tracking" />
-                <field name="uom_id" />
-                <field name="abc_class" />
-                <field name="expiry_date" />
-                <field name="last_order_date" />
-                <field name="image" widget="image" />
-              </group>
-              <notebook>
-                <page string="Suppliers">
-                  <field name="supplier_id13">
-                    <tree editable="bottom">
-                      <field name="name" />
-                    </tree>
-                  </field>
-                </page>
-                <page string="Stock Quants">
-                  <field name="stock_quant_id">
-                    <tree>
-                      
-                    </tree>
-                  </field>
-                </page>
-                <page string="Lots">
-                  <field name="lot_id">
-                    <tree>
-                      
-                    </tree>
-                  </field>
-                </page>
-                <page string="Serial Numbers">
-                  <field name="serial_id">
-                    <tree>
-                    </tree>
-                  </field>
-                </page>
-                <page string="Carbon Objectives">
-                  <field name="carbon_objective_id" widget="many2many_tags" />
-                </page>
-                <page string="Network Robustness Parameters">
-                  <field name="network_robustness_id" widget="many2many_tags" />
-                </page>
-              </notebook>
-            </sheet>
-          </form>
-        </field>
-      </record>
-  
-      <!-- Inventory Item Category Form View -->
-      <record id="view_inventory_item_category_form" model="ir.ui.view">
-        <field name="name">scm.inventory_item_category.form</field>
-        <field name="model">scm.inventory_item_category</field>
-        <field name="arch" type="xml">
-          <form string="Inventory Item Category">
-            <sheet>
-              <group>
-                <field name="name" />
-                <field name="complete_name" readonly="1" />
-                <field name="is_subcategory" />
-                <field name="parent_id" options="{'no_create': True}" />
-                <field name="holding_cost" />
-              </group>
-              <notebook>
-                <page string="Sub-Categories">
-                  <field name="child_id">
-                    <tree editable="bottom">
-                      <field name="name" />
-                      <field name="holding_cost" />
-                    </tree>
-                  </field>
-                </page>
-                <page string="Inventory Items">
-                  <field name="item_id">
-                    <tree>
-                      <field name="name" />
-                    </tree>
-                  </field>
-                </page>
-              </notebook>
-            </sheet>
-          </form>
-        </field>
-      </record>
-  
-      <!-- Warehouse Location Form View -->
-      <record id="view_warehouse_location_form" model="ir.ui.view">
-        <field name="name">scm.warehouse_location.form</field>
-        <field name="model">scm.warehouse_location</field>
-        <field name="arch" type="xml">
-          <form string="Warehouse Location">
-            <sheet>
-              <group>
-                <field name="name" />
-                <field name="complete_name" readonly="1" />
-                <field name="warehouse_id" />
-                <field name="parent_location_id" />
-                <field name="capacity" />
-                <field name="utilization" readonly="1" />
-                <field name="address" />
-                <field name="fixed_costs" />
-                <field name="currency_id" />
-                <field name="active" />
-              </group>
-              <notebook>
-                <page string="Inventory Items">
-                  <field name="w_inventory_item_id">
-                    <tree>
-                      <field name="name" />
-                      <field name="volume" />
-                      <field name="stock_level" />
-                    </tree>
-                  </field>
-                </page>
-                <page string="Child Locations">
-                  <field name="child_location_id">
-                    <tree editable="bottom">
-                      <field name="name" />
-                      <field name="capacity" />
-                    </tree>
-                  </field>
-                </page>
-                <page string="Carbon Objectives">
-                  <field name="carbon_objective_ids" widget="many2many_tags" />
-                </page>
-              </notebook>
-            </sheet>
-          </form>
-        </field>
-      </record>
-  
-      <!-- Tree Views -->
-      <!-- Inventory Item Tree View -->
-      <record id="view_inventory_item_tree" model="ir.ui.view">
-        <field name="name">scm.inventory_item.tree</field>
-        <field name="model">scm.inventory_item</field>
-        <field name="arch" type="xml">
-          <tree string="Inventory Items">
-            <field name="name" />
-            <field name="category_id" />
-            <field name="abc_class" />
-            <field name="unit_cost" />
-            <field name="total_cost" />
-            <field name="reorder_point" />
-            <field name="stock_level" />
-            <field name="location_id" />
-          </tree>
-        </field>
-      </record>
-  
-      <!-- Inventory Item Category Tree View -->
-      <record id="view_inventory_item_category_tree" model="ir.ui.view">
-        <field name="name">scm.inventory_item_category.tree</field>
-        <field name="model">scm.inventory_item_category</field>
-        <field name="arch" type="xml">
-          <tree string="Inventory Item Categories">
-            <field name="complete_name" />
-            <field name="is_subcategory" />
-            <field name="holding_cost" />
-          </tree>
-        </field>
-      </record>
-  
-      <!-- Warehouse Location Tree View -->
-      <record id="view_warehouse_location_tree" model="ir.ui.view">
-        <field name="name">scm.warehouse_location.tree</field>
-        <field name="model">scm.warehouse_location</field>
-        <field name="arch" type="xml">
-          <tree string="Warehouse Locations">
-            <field name="complete_name" />
-            <field name="warehouse_id" />
-            <field name="capacity" />
-            <field name="utilization" />
-            <field name="fixed_costs" />
-            <field name="active" />
-          </tree>
-        </field>
-      </record>
-  
-      <!-- Actions -->
-  
-      <!-- Action for Inventory Items -->
-      <record id="action_inventory_item" model="ir.actions.act_window">
-        <field name="name">Inventory Items</field>
-        <field name="res_model">scm.inventory_item</field>
-        <field name="view_mode">tree,form</field>
-        <field name="views" eval="[
+  <data>
+
+    <!-- Inventory Item Form View -->
+    <record id="view_inventory_item_form" model="ir.ui.view">
+      <field name="name">scm.inventory_item.form</field>
+      <field name="model">scm.inventory_item</field>
+      <field name="arch" type="xml">
+        <form string="Inventory Item">
+          <sheet>
+            <group>
+              <field name="name" />
+              <field name="description" />
+              <field name="category_id" />
+              <field name="location_id" />
+              <field name="stock_level" />
+              <field name="reorder_point" />
+              <field name="safety_stock" />
+              <field name="unit_cost" />
+              <field name="total_cost" />
+              <field name="lead_time_days" />
+              <field name="tracking" />
+              <field name="uom_id" />
+              <field name="abc_class" />
+              <field name="expiry_date" />
+              <field name="last_order_date" />
+              <field name="image" widget="image" />
+            </group>
+            <notebook>
+              <page string="Suppliers">
+                <field name="supplier_id13">
+                  <tree editable="bottom">
+                    <field name="name" />
+                  </tree>
+                </field>
+              </page>
+              <page string="Stock Quants">
+                <field name="stock_quant_id">
+                  <tree>
+
+                  </tree>
+                </field>
+              </page>
+              <page string="Lots">
+                <field name="lot_id">
+                  <tree>
+
+                  </tree>
+                </field>
+              </page>
+              <page string="Serial Numbers">
+                <field name="serial_id">
+                  <tree>
+                  </tree>
+                </field>
+              </page>
+              <page string="Carbon Objectives">
+                <field name="carbon_objective_id" widget="many2many_tags" />
+              </page>
+              <page string="Network Robustness Parameters">
+                <field name="network_robustness_id" widget="many2many_tags" />
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Inventory Item Category Form View -->
+    <record id="view_inventory_item_category_form" model="ir.ui.view">
+      <field name="name">scm.inventory_item_category.form</field>
+      <field name="model">scm.inventory_item_category</field>
+      <field name="arch" type="xml">
+        <form string="Inventory Item Category">
+          <sheet>
+            <group>
+              <field name="name" />
+              <field name="complete_name" readonly="1" />
+              <field name="is_subcategory" />
+              <field name="parent_id" options="{'no_create': True}" />
+              <field name="holding_cost" />
+            </group>
+            <notebook>
+              <page string="Sub-Categories">
+                <field name="child_id">
+                  <tree editable="bottom">
+                    <field name="name" />
+                    <field name="holding_cost" />
+                  </tree>
+                </field>
+              </page>
+              <page string="Inventory Items">
+                <field name="item_id">
+                  <tree>
+                    <field name="name" />
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Warehouse Location Form View -->
+    <record id="view_warehouse_location_form" model="ir.ui.view">
+      <field name="name">scm.warehouse_location.form</field>
+      <field name="model">scm.warehouse_location</field>
+      <field name="arch" type="xml">
+        <form string="Warehouse Location">
+          <sheet>
+            <group>
+              <field name="name" />
+              <field name="complete_name" readonly="1" />
+              <field name="warehouse_id" />
+              <field name="parent_location_id" />
+              <field name="capacity" />
+              <field name="utilization" readonly="1" />
+              <field name="address" />
+              <field name="fixed_costs" />
+              <field name="currency_id" />
+              <field name="active" />
+            </group>
+            <notebook>
+              <page string="Inventory Items">
+                <field name="w_inventory_item_id">
+                  <tree>
+                    <field name="name" />
+                    <field name="volume" />
+                    <field name="stock_level" />
+                  </tree>
+                </field>
+              </page>
+              <page string="Child Locations">
+                <field name="child_location_id">
+                  <tree editable="bottom">
+                    <field name="name" />
+                    <field name="capacity" />
+                  </tree>
+                </field>
+              </page>
+              <page string="Carbon Objectives">
+                <field name="carbon_objective_ids" widget="many2many_tags" />
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Tree Views -->
+    <!-- Inventory Item Tree View -->
+    <record id="view_inventory_item_tree" model="ir.ui.view">
+      <field name="name">scm.inventory_item.tree</field>
+      <field name="model">scm.inventory_item</field>
+      <field name="arch" type="xml">
+        <tree string="Inventory Items">
+          <field name="name" />
+          <field name="category_id" />
+          <field name="abc_class" />
+          <field name="unit_cost" />
+          <field name="total_cost" />
+          <field name="reorder_point" />
+          <field name="stock_level" />
+          <field name="location_id" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- Inventory Item Category Tree View -->
+    <record id="view_inventory_item_category_tree" model="ir.ui.view">
+      <field name="name">scm.inventory_item_category.tree</field>
+      <field name="model">scm.inventory_item_category</field>
+      <field name="arch" type="xml">
+        <tree string="Inventory Item Categories">
+          <field name="complete_name" />
+          <field name="is_subcategory" />
+          <field name="holding_cost" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- Warehouse Location Tree View -->
+    <record id="view_warehouse_location_tree" model="ir.ui.view">
+      <field name="name">scm.warehouse_location.tree</field>
+      <field name="model">scm.warehouse_location</field>
+      <field name="arch" type="xml">
+        <tree string="Warehouse Locations">
+          <field name="complete_name" />
+          <field name="warehouse_id" />
+          <field name="capacity" />
+          <field name="utilization" />
+          <field name="fixed_costs" />
+          <field name="active" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- Actions -->
+
+    <!-- Action for Inventory Items -->
+    <record id="action_inventory_item" model="ir.actions.act_window">
+      <field name="name">Inventory Items</field>
+      <field name="res_model">scm.inventory_item</field>
+      <field name="view_mode">tree,form</field>
+      <field name="views"
+        eval="[
           (ref('view_inventory_item_tree'), 'tree'),
           (ref('view_inventory_item_form'), 'form')
-        ]"/>
-      </record>
-  
-      <!-- Action for Inventory Item Category -->
-      <record id="action_inventory_item_category" model="ir.actions.act_window">
-        <field name="name">Inventory Item Categories</field>
-        <field name="res_model">scm.inventory_item_category</field>
-        <field name="view_mode">tree,form</field>
-        <field name="views"
-          eval="[
+        ]" />
+    </record>
+
+    <!-- Action for Inventory Item Category -->
+    <record id="action_inventory_item_category" model="ir.actions.act_window">
+      <field name="name">Inventory Item Categories</field>
+      <field name="res_model">scm.inventory_item_category</field>
+      <field name="view_mode">tree,form</field>
+      <field name="views"
+        eval="[
           (ref('view_inventory_item_category_tree'), 'tree'),
           (ref('view_inventory_item_category_form'), 'form')
           ]" />
-      </record>
-  
-      <!-- Action for Warehouse Locations -->
-      <record id="action_warehouse_location" model="ir.actions.act_window">
-        <field name="name">Warehouse Locations</field>
-        <field name="res_model">scm.warehouse_location</field>
-        <field name="view_mode">tree,form</field>
-        <field name="views"
-          eval="[
+    </record>
+
+    <!-- Action for Warehouse Locations -->
+    <record id="action_warehouse_location" model="ir.actions.act_window">
+      <field name="name">Warehouse Locations</field>
+      <field name="res_model">scm.warehouse_location</field>
+      <field name="view_mode">tree,form</field>
+      <field name="views"
+        eval="[
           (ref('view_warehouse_location_tree'), 'tree'),
           (ref('view_warehouse_location_form'), 'form')
           ]" />
-      </record>
-  
-      <!-- Menu-Items -->
-      <menuitem id="inventory_management_menu" name="Inventory" sequence="1" />
-  
-      <menuitem id="menu_inventory_item" name="Inventory Items"
-        parent="inventory_management_menu" action="action_inventory_item" sequence="10"/>
-  
-      <menuitem id="menu_inventory_item_category" name="Item Categories"
-        parent="inventory_management_menu" action="action_inventory_item_category" sequence="20" />
-  
-      <menuitem id="menu_warehouse_locations" name="Warehouse Locations"
-        parent="inventory_management_menu" action="action_warehouse_location" sequence="30" />
-  
-    </data>
-  </odoo>
+    </record>
+
+    <!-- Menu-Items -->
+    <menuitem id="inventory_management_menu" 
+    name="Inventory" 
+    sequence="2"
+    web_icon="scm,static\description\inventory.png" />
+
+    <menuitem id="menu_inventory_item" name="Inventory Items"
+      parent="inventory_management_menu" action="action_inventory_item" sequence="10" />
+
+    <menuitem id="menu_inventory_item_category" name="Item Categories"
+      parent="inventory_management_menu" action="action_inventory_item_category" sequence="20" />
+
+    <menuitem id="menu_warehouse_locations" name="Warehouse Locations"
+      parent="inventory_management_menu" action="action_warehouse_location" sequence="30" />
+
+  </data>
+</odoo>

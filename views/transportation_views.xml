@@ -94,7 +94,8 @@
         <!-- Menu Items -->
         <menuitem id="main_transportation_menu"
             name="Transportation"
-            sequence="3" />
+            sequence="3"
+            web_icon="scm,static\description\transportation.png" />
 
         <menuitem id="transportation_mode_menu"
             name="Transportation Mode"
