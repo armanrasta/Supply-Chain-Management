@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 *.log
+__manifest__.py
+__init__.py
+SCM_APP_ASPECTS1.md

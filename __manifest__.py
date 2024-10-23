@@ -32,6 +32,7 @@
         'views/supplier_views.xml',
         'views/supplier_cap_scale_views.xml',
         'views/inventory_views.xml',
+        'views/transportation_views.xml',
         # 'views/views.xml',
         # 'views/templates.xml',
     ],

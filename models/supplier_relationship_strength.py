@@ -94,5 +94,3 @@ class SupplierRelationshipStrength(models.Model):
             # Final relationship score calculation (could be adjusted as needed)
             record.relationship_score = (communication_score + trust_score + transparency_score +
                                          collaboration_score) / 4 + delivery_score + quality_score
-
-    

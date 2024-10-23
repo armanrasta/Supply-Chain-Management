@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Form View -->
+        <record id="view_transportation_mode_form" model="ir.ui.view">
+            <field name="name">scm.transportation_mode.form</field>
+            <field name="model">scm.transportation_mode</field>
+            <field name="arch" type="xml">
+                <form string="Transportation Mode">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="availability_probability" />
+                            <field name="description" />
+                            <field name="active" />
+                        </group>
+                        <group>
+                            <field name="network_robustness_id" widget="many2many_tags" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_transportation_plan_form" model="ir.ui.view">
+            <field name="name">scm.transportation_plan.form</field>
+            <field name="model">scm.transportation_plan</field>
+            <field name="arch" type="xml">
+                <form string="Transportation Plan">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="transportation_mode_id" />
+                            <field name="tradeoff_weight_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View (List View) -->
+        <record id="view_transportation_mode_tree" model="ir.ui.view">
+            <field name="name">scm.transportation_mode.tree</field>
+            <field name="model">scm.transportation_mode</field>
+            <field name="arch" type="xml">
+                <tree string="Transportation Modes" editable="bottom">
+                    <field name="name" />
+                    <field name="availability_probability" />
+                    <field name="active" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_transportation_plan_tree" model="ir.ui.view">
+            <field name="name">scm.transportation_plan.tree</field>
+            <field name="model">scm.transportation_plan</field>
+            <field name="arch" type="xml">
+                <tree string="Transportation Plans">
+                    <field name="name" />
+                    <field name="transportation_mode_id" />
+                    <field name="tradeoff_weight_id" />
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Action transportation mode -->
+        <record id="action_transportation_mode" model="ir.actions.act_window">
+            <field name="name">Transportation Modes</field>
+            <field name="res_model">scm.transportation_mode</field>
+            <field name="view_mode">form,tree</field>
+            <field name="views"
+                eval="[
+                    (ref('view_transportation_mode_form'), 'form'),
+                    (ref('view_transportation_mode_tree'), 'tree')
+                    ]" />
+        </record>
+
+        <!-- Action to Open the Form and Tree View -->
+        <record id="action_transportation_plan" model="ir.actions.act_window">
+            <field name="name">Transportation Plans</field>
+            <field name="res_model">scm.transportation_plan</field>
+            <field name="view_mode">form,tree</field>
+            <field name="views"
+                eval="[
+                    (ref('view_transportation_plan_form'), 'form'),
+                    (ref('view_transportation_plan_tree'), 'tree')
+                    ]" />
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="main_transportation_menu"
+            name="Transportation"
+            sequence="3" />
+
+        <menuitem id="transportation_mode_menu"
+            name="Transportation Mode"
+            action="action_transportation_mode"
+            parent="main_transportation_menu"
+            sequence="10" />
+
+        <menuitem id="transportation_plan_menu"
+            name="Transportation Plan"
+            action="action_transportation_plan"
+            parent="main_transportation_menu"
+            sequence="20" />
+
+    </data>
+</odoo>
