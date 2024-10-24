@@ -130,6 +130,12 @@ You should have received a copy of the GNU Lesser General Public License along w
 
 ---
 
+## Changelog
+
+You can view the full changelog [here](./CHANGELOG.md).
+
+---
+
 By following this guide, you can set up and contribute to the SCM project with ease, leveraging the power of Odoo’s ERP system along with the flexibility of FastAPI for additional services.
 
 ---
