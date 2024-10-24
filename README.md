@@ -54,10 +54,10 @@ The project includes multiple models for managing inventory, suppliers, transpor
 ### Odoo Setup
 
 1. Install Odoo via Docker or using the source code.
-2. Clone the SCM module repository to your Odoo `addons` directory:
+2. Clone the SCM module repository to your Odoo `custom_addons` directory:
 
     ```bash
-    git clone https://github.com/your-repo/scm-addon.git
+    git clone https://github.com/armanrasta/Supply-Chain-Management.git
     ```
 
 3. Install the module by enabling developer mode in Odoo and installing the SCM app from the Apps menu.
@@ -106,7 +106,7 @@ The project uses Odoo’s integrated testing framework for module and field vali
 To run tests for Odoo:
 
 ```bash
-./odoo-bin -c ./odoo17.conf -d <database_name> -u scm -i scm --test-enable  --log-level=test --stop-after-init 
+./odoo-bin -c <config_file> -d <database_name> -u scm -i scm --test-enable  --log-level=test --stop-after-init 
 ```
 
 ## Future Enhancements
