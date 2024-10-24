@@ -3,7 +3,7 @@
     <data noupdate="1">
         
         <record id="supplier_relationship_strength_1" model="scm.supplier_relationship_strength">
-            <field name="supplier_id" ref="scm.supplier_1"/> <!-- Reference to an existing supplier -->
+            <!-- <field name="supplier_id" ref="scm.supplier"/> Reference to an existing supplier -->
             <field name="communication">4</field> <!-- Score from 1 to 5 -->
             <field name="trust">5</field> <!-- Score from 1 to 5 -->
             <field name="transparency">4</field> <!-- Score from 1 to 5 -->
@@ -13,7 +13,7 @@
         </record>
 
         <record id="supplier_relationship_strength_2" model="scm.supplier_relationship_strength">
-            <field name="supplier_id" ref="scm.supplier_2"/> <!-- Reference to another existing supplier -->
+            <!-- <field name="supplier_id" ref="supplier2"/> Reference to another existing supplier -->
             <field name="communication">3</field> <!-- Score from 1 to 5 -->
             <field name="trust">4</field> <!-- Score from 1 to 5 -->
             <field name="transparency">3</field> <!-- Score from 1 to 5 -->
@@ -23,7 +23,7 @@
         </record>
 
         <record id="supplier_relationship_strength_3" model="scm.supplier_relationship_strength">
-            <field name="supplier_id" ref="scm.supplier_3"/> <!-- Reference to another existing supplier -->
+            <!-- <field name="supplier_id" ref="supplier3"/> Reference to another existing supplier -->
             <field name="communication">5</field> <!-- Score from 1 to 5 -->
             <field name="trust">5</field> <!-- Score from 1 to 5 -->
             <field name="transparency">5</field> <!-- Score from 1 to 5 -->
@@ -33,7 +33,7 @@
         </record>
 
         <record id="supplier_relationship_strength_4" model="scm.supplier_relationship_strength">
-            <field name="supplier_id" ref="scm.supplier_4"/> <!-- Reference to another existing supplier -->
+            <!-- <field name="supplier_id" ref="supplier4"/> Reference to another existing supplier -->
             <field name="communication">2</field> <!-- Score from 1 to 5 -->
             <field name="trust">3</field> <!-- Score from 1 to 5 -->
             <field name="transparency">2</field> <!-- Score from 1 to 5 -->

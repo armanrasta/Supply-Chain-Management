@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="demo_product_1" model="product.product">
+            <field name="name">Industrial Microcontroller</field>
+            <field name="type">product</field>
+            <field name="default_code">MC-001</field>
+            <field name="list_price">85.00</field>
+        </record>
+
+        <record id="demo_product_2" model="product.product">
+            <field name="name">Power Supply Unit</field>
+            <field name="type">product</field>
+            <field name="default_code">PSU-002</field>
+            <field name="list_price">120.00</field>
+        </record>
+
+        <record id="demo_product_3" model="product.product">
+            <field name="name">LCD Display Module</field>
+            <field name="type">product</field>
+            <field name="default_code">LCD-003</field>
+            <field name="list_price">95.00</field>
+        </record>
+
+        <!-- TechPro Manufacturing Cost Records -->
+        <record id="supplier_cost_comp_1" model="scm.supplier_cost_competitiveness">
+            <field name="supplier_id10" ref="supplier1" />
+            <field name="product_id" ref="demo_product_1" />
+            <field name="supplier_price">78.50</field>
+            <field name="market_average_price">85.00</field>
+            <field name="procurement_cost">82.00</field>
+            <field name="operation_cost">15.00</field>
+            <field name="maintenance_cost">8.00</field>
+            <field name="disposal_cost">5.00</field>
+            <field name="price_trend">-2.5</field>
+        </record>
+
+        <!-- Global Electronics Solutions Cost Records -->
+        <record id="supplier_cost_comp_2" model="scm.supplier_cost_competitiveness">
+            <field name="supplier_id10" ref="supplier2" />
+            <field name="product_id" ref="demo_product_2" />
+            <field name="supplier_price">115.00</field>
+            <field name="market_average_price">120.00</field>
+            <field name="procurement_cost">118.00</field>
+            <field name="operation_cost">25.00</field>
+            <field name="maintenance_cost">12.00</field>
+            <field name="disposal_cost">8.00</field>
+            <field name="price_trend">1.2</field>
+        </record>
+
+        <!-- AsiaCore Industries Cost Records -->
+        <record id="supplier_cost_comp_3" model="scm.supplier_cost_competitiveness">
+            <field name="supplier_id10" ref="supplier3" />
+            <field name="product_id" ref="demo_product_3" />
+            <field name="supplier_price">88.00</field>
+            <field name="market_average_price">95.00</field>
+            <field name="procurement_cost">90.00</field>
+            <field name="operation_cost">18.00</field>
+            <field name="maintenance_cost">10.00</field>
+            <field name="disposal_cost">6.00</field>
+            <field name="price_trend">-1.8</field>
+        </record>
+
+        <!-- European Components Ltd Cost Records -->
+        <record id="supplier_cost_comp_4" model="scm.supplier_cost_competitiveness">
+            <field name="supplier_id10" ref="supplier4" />
+            <field name="product_id" ref="demo_product_1" />
+            <field name="supplier_price">82.00</field>
+            <field name="market_average_price">85.00</field>
+            <field name="procurement_cost">84.00</field>
+            <field name="operation_cost">16.00</field>
+            <field name="maintenance_cost">9.00</field>
+            <field name="disposal_cost">5.50</field>
+            <field name="price_trend">0.8</field>
+        </record>
+    </data>
+</odoo>

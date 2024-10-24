@@ -2,8 +2,6 @@
 <odoo>
     <data noupdate="1">
         <record id="mode_specific_transportation_cost_1" model="scm.mode_specific_transportation_cost">
-            <field name="transport_mode_id" ref="scm.transportation_mode_1"/> <!-- Reference to an existing transportation mode -->
-            <field name="carrier_id" ref="res.partner_1"/> <!-- Reference to an existing carrier -->
             <field name="date_effective">2024-01-01</field>
             <field name="cost_per_km">2.50</field>
             <field name="cost_per_hour">30.00</field>
@@ -12,8 +10,6 @@
         </record>
         
         <record id="mode_specific_transportation_cost_2" model="scm.mode_specific_transportation_cost">
-            <field name="transport_mode_id" ref="scm.transportation_mode_2"/> <!-- Reference to another existing transportation mode -->
-            <field name="carrier_id" ref="res.partner_2"/> <!-- Reference to another existing carrier -->
             <field name="date_effective">2024-02-01</field>
             <field name="cost_per_km">3.00</field>
             <field name="cost_per_hour">25.00</field>
@@ -22,8 +18,6 @@
         </record>
         
         <record id="mode_specific_transportation_cost_3" model="scm.mode_specific_transportation_cost">
-            <field name="transport_mode_id" ref="scm.transportation_mode_3"/> <!-- Reference to another existing transportation mode -->
-            <field name="carrier_id" ref="res.partner_3"/> <!-- Reference to another existing carrier -->
             <field name="date_effective">2024-03-01</field>
             <field name="cost_per_km">1.75</field>
             <field name="cost_per_hour">28.00</field>

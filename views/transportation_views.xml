@@ -40,6 +40,51 @@
             </field>
         </record>
 
+        <!-- Form View -->
+        <record id="view_mode_specific_transportation_cost_form" model="ir.ui.view">
+            <field name="name">scm.mode.specific.transportation.cost.form</field>
+            <field name="model">scm.mode_specific_transportation_cost</field>
+            <field name="arch" type="xml">
+                <form string="Mode-Specific Transportation Cost">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="transport_mode_id" />
+                                <field name="carrier_id" />
+                                <field name="date_effective" />
+                            </group>
+                            <group>
+                                <field name="cost_per_km" />
+                                <field name="cost_per_hour" />
+                                <field name="fixed_cost" />
+                            </group>
+                            <group>
+                                <field name="variable_cost_percentage" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_mode_specific_transportation_cost_tree" model="ir.ui.view">
+            <field name="name">scm.mode.specific.transportation.cost.tree</field>
+            <field name="model">scm.mode_specific_transportation_cost</field>
+            <field name="arch" type="xml">
+                <tree string="Mode-Specific Transportation Costs">
+                    <field name="transport_mode_id" />
+                    <field name="carrier_id" />
+                    <field name="date_effective" />
+                    <field name="cost_per_km" />
+                    <field name="cost_per_hour" />
+                    <field name="fixed_cost" />
+                    <field name="variable_cost_percentage" />
+                </tree>
+            </field>
+        </record>
+
+
         <!-- Tree View (List View) -->
         <record id="view_transportation_mode_tree" model="ir.ui.view">
             <field name="name">scm.transportation_mode.tree</field>
@@ -74,22 +119,31 @@
             <field name="view_mode">form,tree</field>
             <field name="views"
                 eval="[
-                    (ref('view_transportation_mode_form'), 'form'),
-                    (ref('view_transportation_mode_tree'), 'tree')
-                    ]" />
+            (ref('view_transportation_mode_form'), 'form'),
+            (ref('view_transportation_mode_tree'), 'tree')
+            ]" />
         </record>
 
-        <!-- Action to Open the Form and Tree View -->
+        <!-- Action transportation plan -->
         <record id="action_transportation_plan" model="ir.actions.act_window">
             <field name="name">Transportation Plans</field>
             <field name="res_model">scm.transportation_plan</field>
-            <field name="view_mode">form,tree</field>
+            <field name="view_mode">tree,form</field>
             <field name="views"
                 eval="[
-                    (ref('view_transportation_plan_form'), 'form'),
-                    (ref('view_transportation_plan_tree'), 'tree')
-                    ]" />
+                (ref('view_transportation_plan_tree'), 'tree'),
+                (ref('view_transportation_plan_form'), 'form')
+            ]" />
         </record>
+
+        <!-- Action -->
+        <record id="action_mode_specific_transportation_cost" model="ir.actions.act_window">
+            <field name="name">Mode-Specific Transportation Costs</field>
+            <field name="res_model">scm.mode_specific_transportation_cost</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_mode_specific_transportation_cost_tree" />
+        </record>
+
 
         <!-- Menu Items -->
         <menuitem id="main_transportation_menu"
@@ -109,5 +163,9 @@
             parent="main_transportation_menu"
             sequence="20" />
 
+        <menuitem id="menu_mode_specific_transportation_cost"
+            name="Mode-Specific Transportation Costs"
+            parent="main_transportation_menu" action="action_mode_specific_transportation_cost"
+            sequence="30" />
     </data>
 </odoo>

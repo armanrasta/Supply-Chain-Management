@@ -3,7 +3,7 @@
     <data noupdate="1">
         <!-- Scalability Plans Data -->
         <record id="supplier_scalability_1" model="scm.supplier_scalability">
-            <field name="supplier_id6" ref="scm.supplier_1"/> <!-- Reference to an existing supplier -->
+            <!-- <field name="supplier_id6" ref="scm.supplier_1"/> Reference to an existing supplier -->
             <field name="scale_up_plan">Expand factory capacity by 20% through additional machinery.</field>
             <field name="scale_down_plan">Reduce overtime hours and shift production to maintenance mode.</field>
             <field name="investment_required">50000.00</field> <!-- Investment required for scalability -->
@@ -14,7 +14,7 @@
         </record>
 
         <record id="supplier_scalability_2" model="scm.supplier_scalability">
-            <field name="supplier_id6" ref="scm.supplier_2"/> <!-- Reference to another existing supplier -->
+            <!-- <field name="supplier_id6" ref="scm.supplier_2"/> Reference to another existing supplier -->
             <field name="scale_up_plan">Invest in new technology to increase efficiency by 30%.</field>
             <field name="scale_down_plan">Utilize existing inventory to manage production levels.</field>
             <field name="investment_required">75000.00</field> <!-- Investment required for scalability -->
@@ -25,7 +25,7 @@
         </record>
 
         <record id="supplier_scalability_3" model="scm.supplier_scalability">
-            <field name="supplier_id6" ref="scm.supplier_3"/> <!-- Reference to another existing supplier -->
+            <!-- <field name="supplier_id6" ref="scm.supplier_3"/> Reference to another existing supplier -->
             <field name="scale_up_plan">Hire additional staff and extend shifts to meet rising demand.</field>
             <field name="scale_down_plan">Consolidate operations and reduce staff to manage costs.</field>
             <field name="investment_required">30000.00</field> <!-- Investment required for scalability -->
@@ -36,7 +36,7 @@
         </record>
 
         <record id="supplier_scalability_4" model="scm.supplier_scalability">
-            <field name="supplier_id6" ref="scm.supplier_4"/> <!-- Reference to another existing supplier -->
+            <!-- <field name="supplier_id6" ref="scm.supplier_4"/> Reference to another existing supplier -->
             <field name="scale_up_plan">Expand into new markets and increase product lines.</field>
             <field name="scale_down_plan">Scale back production of low-demand products.</field>
             <field name="investment_required">100000.00</field> <!-- Investment required for scalability -->

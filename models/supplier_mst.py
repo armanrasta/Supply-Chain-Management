@@ -10,7 +10,7 @@ class ModeSpecificTransportationCost(models.Model):
     transport_mode_id = fields.Many2one(
         'scm.transportation_mode', string='Transport Mode', required=True, ondelete='cascade')
     carrier_id = fields.Many2one('res.partner', string='Carrier', domain=[
-                                 ('supplier', '=', True)], required=True, ondelete='restrict')
+        ('supplier_rank', '>', 0)], required=True, ondelete='restrict')
     date_effective = fields.Date(
         string='Effective Date', required=True, default=fields.Date.today)
     cost_per_km = fields.Float(

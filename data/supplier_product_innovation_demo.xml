@@ -4,10 +4,10 @@
     <data noupdate="1">
     
         <record id="supplier_product_innovation_1" model="scm.supplier_product_innovation">
-            <field name="supplier_id8" ref="scm.supplier_1"/> <!-- Reference to an existing supplier -->
-            <field name="product_id" ref="product.product_1"/> <!-- Reference to a new product -->
+            <!-- <field name="supplier_id8" ref="scm.supplier_1"/>  -->
+            <!-- <field name="product_id" ref="product.product_1"/>  -->
             <field name="introduction_date">2024-03-15</field>
-            <field name="product_category_id" ref="product.category_1"/> <!-- Reference to a product category -->
+            <!-- <field name="product_category_id" ref="product.category_1"/>  -->
             <field name="description">Innovative eco-friendly packaging solution.</field>
             <field name="innovation_type">radical</field>
             <field name="development_time">8.0</field>
@@ -18,10 +18,10 @@
         </record>
 
         <record id="supplier_product_innovation_2" model="scm.supplier_product_innovation">
-            <field name="supplier_id8" ref="scm.supplier_2"/> <!-- Reference to another existing supplier -->
-            <field name="product_id" ref="product.product_2"/> <!-- Reference to another new product -->
+            <!-- <field name="supplier_id8" ref="scm.supplier_2"/>  -->
+            <!-- <field name="product_id" ref="product.product_2"/>  -->
             <field name="introduction_date">2024-06-10</field>
-            <field name="product_category_id" ref="product.category_2"/> <!-- Reference to another product category -->
+            <!-- <field name="product_category_id" ref="product.category_2"/>  -->
             <field name="description">Next-gen energy-efficient light bulb.</field>
             <field name="innovation_type">incremental</field>
             <field name="development_time">5.0</field>
@@ -32,10 +32,10 @@
         </record>
 
         <record id="supplier_product_innovation_3" model="scm.supplier_product_innovation">
-            <field name="supplier_id8" ref="scm.supplier_3"/> <!-- Reference to another existing supplier -->
-            <field name="product_id" ref="product.product_3"/> <!-- Reference to another new product -->
+            <!-- <field name="supplier_id8" ref="scm.supplier_3"/> Reference to another existing supplier -->
+            <!-- <field name="product_id" ref="product.product_3"/> Reference to another new product -->
             <field name="introduction_date">2024-08-20</field>
-            <field name="product_category_id" ref="product.category_3"/> <!-- Reference to another product category -->
+            <!-- <field name="product_category_id" ref="product.category_3"/> Reference to another product category -->
             <field name="description">Smart home energy management system.</field>
             <field name="innovation_type">radical</field>
             <field name="development_time">12.0</field>
@@ -46,10 +46,10 @@
         </record>
 
         <record id="supplier_product_innovation_4" model="scm.supplier_product_innovation">
-            <field name="supplier_id8" ref="scm.supplier_4"/> <!-- Reference to another existing supplier -->
-            <field name="product_id" ref="product.product_4"/> <!-- Reference to another new product -->
+            <!-- <field name="supplier_id8" ref="scm.supplier_4"/> Reference to another existing supplier -->
+            <!-- <field name="product_id" ref="product.product_4"/> Reference to another new product -->
             <field name="introduction_date">2024-11-01</field>
-            <field name="product_category_id" ref="product.category_4"/> <!-- Reference to another product category -->
+            <!-- <field name="product_category_id" ref="product.category_4"/> Reference to another product category -->
             <field name="description">Recyclable and biodegradable cleaning products.</field>
             <field name="innovation_type">incremental</field>
             <field name="development_time">6.0</field>

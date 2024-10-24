@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="view_supplier_relationship_strength_tree" model="ir.ui.view">
+            <field name="name">scm.supplier_relationship_strength.tree</field>
+            <field name="model">scm.supplier_relationship_strength</field>
+            <field name="arch" type="xml">
+                <tree string="Supplier Relationship Strength">
+                    <field name="supplier_id9"/>
+                    <field name="relationship_start_date"/>
+                    <field name="relationship_end_date"/>
+                    <field name="communication_quality"/>
+                    <field name="trust_level"/>
+                    <field name="transparency_level"/>
+                    <field name="collaboration_level"/>
+                    <field name="on_time_delivery_rate"/>
+                    <field name="quality_compliance_rate"/>
+                    <field name="relationship_score"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_supplier_relationship_strength_form" model="ir.ui.view">
+            <field name="name">scm.supplier_relationship_strength.form</field>
+            <field name="model">scm.supplier_relationship_strength</field>
+            <field name="arch" type="xml">
+                <form string="Supplier Relationship Strength">
+                    <sheet>
+                        <group>
+                            <field name="supplier_id9" required="1"/>
+                            <field name="relationship_start_date"/>
+                            <field name="relationship_end_date"/>
+                        </group>
+                        <group>
+                            <field name="communication_quality"/>
+                            <field name="communication_frequency"/>
+                        </group>
+                        <group>
+                            <field name="trust_level"/>
+                            <field name="transparency_level"/>
+                        </group>
+                        <group>
+                            <field name="collaboration_level"/>
+                            <field name="issue_resolution_timing"/>
+                        </group>
+                        <group>
+                            <field name="on_time_delivery_rate"/>
+                            <field name="quality_compliance_rate"/>
+                        </group>
+                        <group>
+                            <field name="relationship_score" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_supplier_relationship_strength" model="ir.actions.act_window">
+            <field name="name">Supplier Relationship Strength</field>
+            <field name="res_model">scm.supplier_relationship_strength</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <record id="menu_supplier_relationship_strength" model="ir.ui.menu">
+            <field name="name">Supplier Relationship Strength</field>
+            <field name="parent_id" ref="main_supplier_menu"/>
+            <field name="action" ref="action_supplier_relationship_strength"/>
+            <field name="sequence" eval="70"/>
+        </record>
+
+    </data>
+</odoo>

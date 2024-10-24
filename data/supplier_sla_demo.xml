@@ -1,0 +1,12 @@
+<odoo>
+    <data noupdate="1">
+        <record id="sla1" model="scm.sla">
+            <field name="name">Standard SLA</field>
+            <field name="fulfillment_rate">95.0</field>
+            <field name="delivery_time">5</field>
+            <field name="support_response_time">24</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+    </data>
+</odoo>

@@ -9,9 +9,7 @@
             <field name="target_reduction">50.0</field>
             <field name="start_date">2024-01-01</field>
             <field name="end_date">2025-12-31</field>
-            <field name="supplier_id4" eval="[(6, 0, [ref('scm.supplier1'), ref('scm.supplier2')])]"/> <!-- Reference to existing suppliers -->
-            <field name="inventory_item_id4" eval="[(6, 0, [ref('scm.inventory_item1'), ref('scm.inventory_item3')])]"/> <!-- Reference to existing inventory items -->
-            <field name="facility_ids" eval="[(6, 0, [ref('scm.warehouse_location1')])]"/> <!-- Reference to an existing facility -->
+            
             <field name="active">True</field>
         </record>
 
@@ -21,9 +19,7 @@
             <field name="target_reduction">30.0</field>
             <field name="start_date">2024-03-01</field>
             <field name="end_date">2025-03-01</field>
-            <field name="supplier_id4" eval="[(6, 0, [ref('scm.supplier2')])]"/> <!-- Reference to an existing supplier -->
-            <field name="inventory_item_id4" eval="[(6, 0, [ref('scm.inventory_item2')])]"/> <!-- Reference to an existing inventory item -->
-            <field name="facility_ids" eval="[(6, 0, [ref('scm.warehouse_location2')])]"/> <!-- Reference to an existing facility -->
+
             <field name="active">True</field>
         </record>
         
@@ -33,9 +29,7 @@
             <field name="target_reduction">40.0</field>
             <field name="start_date">2024-06-01</field>
             <field name="end_date">2026-06-01</field>
-            <field name="supplier_id4" eval="[(6, 0, [ref('scm.supplier3')])]"/> <!-- Reference to an existing supplier -->
-            <field name="inventory_item_id4" eval="[(6, 0, [ref('scm.inventory_item3')])]"/> <!-- Reference to an existing inventory item -->
-            <field name="facility_ids" eval="[(6, 0, [ref('scm.warehouse_location3')])]"/> <!-- Reference to an existing facility -->
+            
             <field name="active">True</field>
         </record>
         
@@ -45,9 +39,7 @@
             <field name="target_reduction">25.0</field>
             <field name="start_date">2024-08-01</field>
             <field name="end_date">2025-08-01</field>
-            <field name="supplier_id4" eval="[(6, 0, [ref('scm.supplier4')])]"/> <!-- Reference to an existing supplier -->
-            <field name="inventory_item_id4" eval="[(6, 0, [ref('scm.inventory_item4')])]"/> <!-- Reference to an existing inventory item -->
-            <field name="facility_ids" eval="[(6, 0, [ref('scm.warehouse_location4')])]"/> <!-- Reference to an existing facility -->
+            
             <field name="active">True</field>
         </record>        
     

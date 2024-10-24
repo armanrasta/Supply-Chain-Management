@@ -1,0 +1,61 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Supplier Capacity Demo Records -->
+        <record id="supplier_capacity_1" model="scm.supplier_capacity">
+            <field name="supplier_id5" ref="supplier0"/>
+            <field name="product_id" ref="product_product_1"/>
+            <field name="max_capacity">10000.00</field>
+            <field name="min_capacity">2000.00</field>
+            <field name="current_utilization">75.00</field>
+            <field name="utilization_trend">3.50</field>
+            <field name="lead_time">7</field>
+            <field name="last_review_date">2024-01-15</field>
+            <field name="capacity_type">normal</field>
+            <field name="capacity_status">stable</field>
+            <field name="period">monthly</field>
+        </record>
+
+        <record id="supplier_capacity_2" model="scm.supplier_capacity">
+            <field name="supplier_id5" ref="supplier3"/>
+            <field name="product_id" ref="product_product_1"/>
+            <field name="max_capacity">5000.00</field>
+            <field name="min_capacity">1000.00</field>
+            <field name="current_utilization">85.00</field>
+            <field name="utilization_trend">5.00</field>
+            <field name="lead_time">10</field>
+            <field name="last_review_date">2024-01-20</field>
+            <field name="capacity_type">peak</field>
+            <field name="capacity_status">increasing</field>
+            <field name="period">weekly</field>
+        </record>
+
+        <record id="supplier_capacity_3" model="scm.supplier_capacity">
+            <field name="supplier_id5" ref="supplier1"/>
+            <field name="product_id" ref="product_product_1"/>
+            <field name="max_capacity">15000.00</field>
+            <field name="min_capacity">3000.00</field>
+            <field name="current_utilization">65.00</field>
+            <field name="utilization_trend">-2.00</field>
+            <field name="lead_time">15</field>
+            <field name="last_review_date">2024-01-25</field>
+            <field name="capacity_type">normal</field>
+            <field name="capacity_status">decreasing</field>
+            <field name="period">quarterly</field>
+        </record>
+
+        <record id="supplier_capacity_4" model="scm.supplier_capacity">
+            <field name="supplier_id5" ref="supplier2"/>
+            <field name="product_id" ref="product_product_1"/>
+            <field name="max_capacity">8000.00</field>
+            <field name="min_capacity">1500.00</field>
+            <field name="current_utilization">90.00</field>
+            <field name="utilization_trend">4.00</field>
+            <field name="lead_time">5</field>
+            <field name="last_review_date">2024-01-30</field>
+            <field name="capacity_type">off_peak</field>
+            <field name="capacity_status">stable</field>
+            <field name="period">yearly</field>
+        </record>
+    </data>
+</odoo>

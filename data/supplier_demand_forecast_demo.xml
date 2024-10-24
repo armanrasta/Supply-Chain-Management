@@ -2,33 +2,33 @@
 <odoo>
     <data noupdate="1">
         <record id="demand_forecast_1" model="scm.demand_forecast">
-            <field name="inventory_item_id2" ref="scm.inventory_item_1"/> <!-- Reference to an existing inventory item -->
+            
             <field name="scenario">best</field>
             <field name="period_start_date">2024-10-01</field>
             <field name="period_end_date">2024-10-31</field>
             <field name="forecasted_quantity">150</field>
             <field name="active" eval="True"/>
-            <field name="supplier_id3" ref="scm.supplier_1"/> <!-- Reference to an existing supplier -->
+            
         </record>
         
         <record id="demand_forecast_2" model="scm.demand_forecast">
-            <field name="inventory_item_id2" ref="scm.inventory_item_2"/> <!-- Reference to another existing inventory item -->
+            
             <field name="scenario">most_likely</field>
             <field name="period_start_date">2024-11-01</field>
             <field name="period_end_date">2024-11-30</field>
             <field name="forecasted_quantity">200</field>
             <field name="active" eval="True"/>
-            <field name="supplier_id3" ref="scm.supplier_2"/> <!-- Reference to another existing supplier -->
+            
         </record>
         
         <record id="demand_forecast_3" model="scm.demand_forecast">
-            <field name="inventory_item_id2" ref="scm.inventory_item_3"/> <!-- Reference to another existing inventory item -->
+           
             <field name="scenario">worst</field>
             <field name="period_start_date">2024-12-01</field>
             <field name="period_end_date">2024-12-31</field>
             <field name="forecasted_quantity">80</field>
             <field name="active" eval="True"/>
-            <field name="supplier_id3" ref="scm.supplier_3"/> <!-- Reference to another existing supplier -->
+            
         </record>
     </data>
 </odoo>

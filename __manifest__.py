@@ -34,12 +34,37 @@
         'views/inventory_views.xml',
         'views/transportation_views.xml',
         'views/demand_forecast_views.xml',
+        'views/supplier_relationship_strength_views.xml',
+        "views/sla_views.xml",
+        "views/contact_person_views.xml",
+        
         # 'views/views.xml',
         # 'views/templates.xml',
+        
+        'data/supplier_supplier_demo.xml',
+        'data/inventory_inventory_item_categories_demo.xml',
+        'data/inventory_inventory_item_demo.xml',
+        'data/inventory_warehouse_location_demo.xml',
+        # 'data/supplier_capacity_demo.xml',
+        'data/supplier_carbon_objective_demo.xml',
+        'data/supplier_contact_person_demo.xml',
+        'data/supplier_cost_competitiveness_demo.xml',
+        # 'data/supplier_demand_forecast_demo.xml',
+        # 'data/supplier_mst_demo.xml',
+        # 'data/supplier_network_robustness_demo.xml',
+        # 'data/supplier_product_innovation_demo.xml',
+        # 'data/supplier_rd_investment_demo.xml',
+        # 'data/supplier_relationship_strength_demo.xml',
+        # 'data/supplier_reliability_demo.xml',
+        # 'data/supplier_scalibility_plans_demo.xml',
+        'data/supplier_sla_demo.xml',
+        'data/supplier_trade_off_weight_demo.xml',
+        'data/supplier_transportation_mode_demo.xml',
+        'data/supplier_transportation_plan_demo.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+    
     ],
     # 'test': [
     #     'tests/inventory_inventory_category_test.py',

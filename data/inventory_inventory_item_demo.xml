@@ -17,9 +17,9 @@
       <field name="lead_time_variability">0.2</field>
       <field name="cost_method">fifo</field>
       <field name="tracking">serial</field>
-      <field name="uom_id" ref="uom.product_uom_unit" />
-      <field name="location_id" ref="stock.stock_location_stock" />
-      <field name="category_id" ref="scm.inventory_item_category_1" />
+      <!-- <field name="uom_id" ref="uom.product_uom_unit" />
+      <field name="location_id" ref="stock.stock_location_stock" /> -->
+      <!-- <field name="category_id" ref="inventory_item_category" /> -->
     </record>
 
     <record id="inventory_item1" model="scm.inventory_item">
@@ -36,9 +36,9 @@
       <field name="lead_time_variability">0.3</field>
       <field name="cost_method">lifo</field>
       <field name="tracking">lot</field>
-      <field name="uom_id" ref="uom.product_uom_unit" />
-      <field name="location_id" ref="stock.stock_location_stock" />
-      <field name="category_id" ref="scm.inventory_item_category_2" />
+      <!-- <field name="uom_id" ref="uom.product_uom_unit" />
+      <field name="location_id" ref="stock.stock_location_stock" /> -->
+      <!-- <field name="category_id" ref="scm.inventory_item_category" /> -->
     </record>
 
     <record id="inventory_item2" model="scm.inventory_item">
@@ -55,9 +55,9 @@
       <field name="lead_time_variability">0.25</field>
       <field name="cost_method">average</field>
       <field name="tracking">none</field>
-      <field name="uom_id" ref="uom.product_uom_unit" />
+      <!-- <field name="uom_id" ref="uom.product_uom_unit" />
       <field name="location_id" ref="stock.stock_location_stock" />
-      <field name="category_id" ref="scm.inventory_item_category_3" />
+      <field name="category_id" ref="scm.inventory_item_category" /> -->
     </record>
 
     <record id="inventory_item3" model="scm.inventory_item">
@@ -74,9 +74,9 @@
       <field name="lead_time_variability">0.25</field>
       <field name="cost_method">average</field>
       <field name="tracking">none</field>
-      <field name="uom_id" ref="uom.product_uom_unit" />
+      <!-- <field name="uom_id" ref="uom.product_uom_unit" />
       <field name="location_id" ref="stock.stock_location_stock" />
-      <field name="category_id" ref="scm.inventory_item_category_4" />
+      <field name="category_id" ref="scm.inventory_item_category" /> -->
     </record>
 
   </data>

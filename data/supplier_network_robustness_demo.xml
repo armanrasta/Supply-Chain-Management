@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="network_robustness_1" model="scm.network_robustness">
+            <field name="name">Logistics Network Flexibility</field>
+            <field name="description">This parameter measures the flexibility of the logistics network to adapt to changes.</field>
+            <field name="value">75.00</field>
+            <!-- <field name="inventory_item_id3" eval="[(6, 0, [ref('scm.inventory_item_1'), ref('scm.inventory_item_2')])]"/> References to existing inventory items -->
+            <!-- <field name="transportation_mode_id" eval="[(6, 0, [ref('scm.transportation_mode_1')])]"/> Reference to an existing transportation mode -->
+            <field name="active">True</field>
+            <!-- <field name="supplier_id" eval="[(6, 0, [ref('scm.supplier_1'), ref('scm.supplier_2')])]"/> References to existing suppliers -->
+        </record>
+
+        <record id="network_robustness_2" model="scm.network_robustness">
+            <field name="name">Cost Efficiency</field>
+            <field name="description">This parameter assesses the cost efficiency of the transportation modes used.</field>
+            <field name="value">85.00</field>
+            <!-- <field name="inventory_item_id3" eval="[(6, 0, [ref('scm.inventory_item_3')])]"/> Reference to an existing inventory item -->
+            <!-- <field name="transportation_mode_id" eval="[(6, 0, [ref('scm.transportation_mode_2')])]"/> Reference to another existing transportation mode -->
+            <field name="active">True</field>
+            <!-- <field name="supplier_id" eval="[(6, 0, [ref('scm.supplier_3')])]"/> Reference to another existing supplier -->
+        </record>
+
+        <record id="network_robustness_3" model="scm.network_robustness">
+            <field name="name">Delivery Reliability</field>
+            <field name="description">This parameter evaluates the reliability of delivery within the supply chain.</field>
+            <field name="value">90.00</field>
+            <!-- <field name="inventory_item_id3" eval="[(6, 0, [ref('scm.inventory_item_4')])]"/> Reference to another existing inventory item -->
+            <!-- <field name="transportation_mode_id" eval="[(6, 0, [ref('scm.transportation_mode_3')])]"/> Reference to another existing transportation mode -->
+            <field name="active">True</field>
+            <!-- <field name="supplier_id" eval="[(6, 0, [ref('scm.supplier_4')])]"/> Reference to another existing supplier -->
+        </record>
+    </data>
+</odoo>
